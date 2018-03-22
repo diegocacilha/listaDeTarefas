@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de Tarefas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .loader {
+          margin: 0 auto;
+          z-index: 100;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          width: 120px;
+          height: 120px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .content-loader{
+          width: 90%;
+          position: absolute;
+          padding: 10%;
+        }
+      </style>
+  </head>
+  <body ng-app='app'>
+    <div class="container" ng-view>
+
+    </div>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/controllers/tarefasController.js"></script>
+    <script src="./js/controllers/tarefaController.js"></script>
+    <script src="./js/services/tarefaService.js"></script>
+    <script src="./js/diretivas/uiDateDirective.js"></script>
+
+    <script src="./bower_components/angular-resource/angular-resource.js"></script>
+
+  </body>
+</html>

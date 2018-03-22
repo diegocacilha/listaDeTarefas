@@ -1,0 +1,16 @@
+{
+  "name": "hbsis",
+  "version": "0.0.0",
+  "authors": [
+    "Diego Armando Cacilha <cacilha.tec@gmail.com>"
+  ],
+  "description": "processo seletivo front-end",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.6.9",
+    "angular-route": "1.3",
+    "bootstrap": "^3.0.0",
+    "angular-resource": "1.3"
+  }
+}

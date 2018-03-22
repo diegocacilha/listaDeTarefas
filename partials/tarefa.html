@@ -1,0 +1,21 @@
+<div class="content-loader" ng-show='loading'>
+  <div class="loader"></div>
+</div>
+<div ng-show='mensagem' class="alert alert-success" role='alert'>
+  <p>{{mensagem.msg}}</p>
+</div>
+
+<form ng-submit="salva()">
+  <div class="form-group">
+    <label for="description">Descrição</label>
+    <input type="text" name="description" id="description" class="form-control" required ng-model="tarefa.description" />
+  </div>
+  <div class="form-group">
+    <label for="createdAt">Criado em</label>
+    <input type="text" id="createdAt" class="form-control" ng-model="tarefa.createdAt" ui-date />
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox" ng-model="tarefa.done">Realizado</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
