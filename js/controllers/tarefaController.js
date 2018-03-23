@@ -1,5 +1,5 @@
 app.controller('tarefaController',
-  function($scope, $routeParams, Tarefa, $http){
+  function($scope, $routeParams, Tarefa, $http, $filter){
     $scope.loading = true;
 
     if($routeParams.id){
@@ -7,6 +7,7 @@ app.controller('tarefaController',
         {id: $routeParams.id},
         function(tarefa){
           $scope.tarefa = tarefa;
+          $scope.tarefa.createdAt = new Date($scope.tarefa.createdAt);
           $scope.loading = false;
         },
         function(erro){
