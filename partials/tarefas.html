@@ -35,7 +35,7 @@
           <a href="#/tarefa/{{tarefa._id}}">{{tarefa.description}}</a>
         </td>
         <td>{{tarefa.done}}</td>
-        <td>{{tarefa.createdAt}}</td>
+        <td>{{tarefa.createdAt | date:'dd/MM/yyyy HH:mm'}}</td>
         <td>
           <button class="btn btn-danger" type="button" name="button" ng-click='removerTarefa(tarefa)'>Remover</button>
         </td>
